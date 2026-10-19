@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+wandb/
+outputs/
+checkpoints/
+evaluation/
+*.pkl
+*.pickle
+*.gif
+!docs/**/*.gif
+.hydra/
+.DS_Store

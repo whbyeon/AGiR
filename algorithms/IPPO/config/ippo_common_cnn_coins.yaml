@@ -1,0 +1,54 @@
+"ALGO": "ippo"
+"LR": 0.0005
+"NUM_ENVS": 256
+"NUM_STEPS": 500
+"TOTAL_TIMESTEPS": 3e8
+"UPDATE_EPOCHS": 2
+"NUM_MINIBATCHES": 500
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.95
+"CLIP_EPS": 0.2
+"ENT_COEF": 0.01
+"VF_COEF": 0.5
+"MAX_GRAD_NORM": 0.5
+"ACTIVATION": "relu"
+"ENV_NAME": "coin_game"
+"REW_SHAPING_HORIZON": 2.5e6
+"SHAPING_BEGIN": 1e6
+"ENV_KWARGS":
+  "num_agents" : 2
+  "num_inner_steps" : 500
+  "shared_rewards" : True
+  "cnn" : True
+  "jit" : True
+  "prob_scaling" : 2
+  "inequity_aversion" : False
+  "inequity_aversion_target_agents" : [0,1]
+  "inequity_aversion_alpha" : 0.05
+  "inequity_aversion_beta" : 0.0005
+  "enable_smooth_rewards" : True
+  "svo" : False
+  "svo_target_agents" : [0,1]
+  "svo_w" : 0.5
+  "svo_ideal_angle_degrees" : 45
+
+
+"NG_KWARGS":
+  "gift_ratio": 0.9
+  "average": True
+
+"ANNEAL_LR": True
+"SEED": 40
+"NUM_SEEDS": 1
+"TUNE": False
+
+"REWARD": "common"
+"GIF_NUM_FRAMES": 500
+"PARAMETER_SHARING": False
+
+# Weights & Biases logging.
+"ENTITY": ""
+"PROJECT": "socialjax"
+"WANDB_MODE" : "online"
+"WANDB_TAGS":
+  - COMMON_REWARD

@@ -1,0 +1,66 @@
+"ALGO": "lase"
+"LR": 0.0005
+"RNN_LR": 0.0005
+"NUM_ENVS": 64
+"NUM_STEPS": 500
+"TOTAL_TIMESTEPS": 3e8
+"UPDATE_EPOCHS": 2
+"NUM_MINIBATCHES": 500
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.95
+"CLIP_EPS": 0.2
+"ENT_COEF": 0.01
+"VF_COEF": 0.5
+"MAX_GRAD_NORM": 0.5
+"ACTIVATION": "relu"
+"ENV_NAME": "coin_game"
+"REW_SHAPING_HORIZON": 2.5e6
+"SHAPING_BEGIN": 1e6
+"MAP_NAME": "asym2"
+"ENV_KWARGS":
+  "num_agents" : 2
+  "num_inner_steps" : 500
+  "shared_rewards" : False
+  "cnn" : True
+  "jit" : True
+  "prob_scaling" : 2
+  "inequity_aversion" : False
+  "svo" : False
+
+
+"REFUSE_KWARGS":
+  "refusing_method": "alld"
+  "w_min": 0.0
+  "w_max": 1.0
+  "w_period": 50
+  "alpha": 0.01
+  "start_changing_w": -1
+  "beta": 1.0
+  "min_delta": -1.0
+  "esc_scale": 0.1
+  "w_init": "random"
+  "num_epi_for_rnn_train":  50
+
+"LASE_KWARGS":
+  "start_learn_gift" : -1
+  "DELTA": 0.1
+  "GRAD_STEPS": 50
+  "LR_SR": 0.0005
+  "LR_IMAGINE": 0.0005
+
+
+"ANNEAL_LR": True
+"SEED": 10
+"NUM_SEEDS": 1
+"TUNE": False
+
+"REWARD": "individual"
+"GIF_NUM_FRAMES": 5
+"PARAMETER_SHARING": False
+
+# Weights & Biases logging.
+"ENTITY": ""
+"PROJECT": "socialjax"
+"WANDB_MODE" : "online"
+"WANDB_TAGS":
+  - INDIVIDUAL_REWARD

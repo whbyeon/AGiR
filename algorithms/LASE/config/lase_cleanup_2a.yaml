@@ -1,0 +1,49 @@
+"ALGO": "lase"
+"LR": 0.0005
+"LR_SR": 0.0005
+"LR_IMAGINE": 0.0005
+"GRAD_STEPS": 50
+"NUM_ENVS": 256
+"NUM_STEPS": 100
+"TOTAL_TIMESTEPS": 3e8
+"UPDATE_EPOCHS": 2
+"NUM_MINIBATCHES": 4
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.95
+"CLIP_EPS": 0.2
+"ENT_COEF": 0.01
+"VF_COEF": 0.5
+"MAX_GRAD_NORM": 0.5
+"ACTIVATION": "relu"
+"ENV_NAME": "clean_up_2a_competence_gap_r025"
+"REW_SHAPING_HORIZON": 2.5e6
+"SHAPING_BEGIN": 1e6
+"MAP_NAME": "competence_gap_r025"
+"ENV_KWARGS":
+  "num_agents" : 2
+  "num_inner_steps" : 500
+  "shared_rewards" : False
+  "cnn" : True
+  "jit" : True
+  "inequity_aversion" : False
+  "svo" : False
+
+"LASE_KWARGS":
+  "start_learn_gift" : -1
+  "DELTA": 0.1
+
+"ANNEAL_LR": True
+"SEED": 30
+"NUM_SEEDS": 1
+"TUNE": False
+
+"REWARD": "individual"
+"GIF_NUM_FRAMES": 2
+"PARAMETER_SHARING": False
+
+# Weights & Biases logging.
+"ENTITY": ""
+"PROJECT": "socialjax"
+"WANDB_MODE" : "online"
+"WANDB_TAGS":
+  - INDIVIDUAL_REWARD

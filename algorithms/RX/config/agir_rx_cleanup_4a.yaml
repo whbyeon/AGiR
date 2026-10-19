@@ -1,0 +1,61 @@
+"ALGO": "lase"
+"LR": 0.0005
+"RNN_LR": 0.0005
+"NUM_ENVS": 256
+"NUM_STEPS": 100
+"TOTAL_TIMESTEPS": 3e8
+"UPDATE_EPOCHS": 2
+"NUM_MINIBATCHES": 4
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.95
+"CLIP_EPS": 0.2
+"ENT_COEF": 0.01
+"VF_COEF": 0.5
+"MAX_GRAD_NORM": 0.5
+"ACTIVATION": "relu"
+"ENV_NAME": "clean_up_4a_Alow"
+"REW_SHAPING_HORIZON": 2.5e6
+"SHAPING_BEGIN": 1e6
+"MAP_NAME": "easy"  # Label for logs and saved results.
+"ENV_KWARGS":
+  "num_agents" : 4
+  "num_inner_steps" : 500
+  "shared_rewards" : False
+  "cnn" : True
+  "jit" : True
+  "inequity_aversion" : False
+  "svo" : False
+
+
+"REFUSE_KWARGS":
+  "refusing_method": "alld"
+  "w_min": 0.0
+  "w_max": 1.0
+  "w_period": 50
+  "alpha": 0.01
+  "start_changing_w": -1
+  "beta": 1.0
+  "min_delta": -1.0
+  "esc_scale": 0.1
+  "w_init": "random"
+  "num_epi_for_rnn_train":  50
+
+"NG_KWARGS":
+  "gift_ratio": 0.5
+  "average": True
+
+"ANNEAL_LR": True
+"SEED": 40
+"NUM_SEEDS": 1
+"TUNE": False
+
+"REWARD": "individual"
+"GIF_NUM_FRAMES": 500
+"PARAMETER_SHARING": False
+
+# Weights & Biases logging.
+"ENTITY": ""
+"PROJECT": "socialjax"
+"WANDB_MODE" : "online"
+"WANDB_TAGS":
+  - INDIVIDUAL_REWARD
